@@ -49,14 +49,14 @@
     </script>
 
     <!-- Brand Intro (Hero only) -->
-    <link rel="stylesheet" href="%BASE_URL%style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- Brand Intro (Hero-only overlay; removed after animation) -->
     <div id="duzz-intro-portal" aria-hidden="true"></div>
     <div id="root"></div>
-    <!-- Public JS (do not bundle) -->
-    <script src="%BASE_URL%main.js" defer></script>
+    <!-- Brand intro controller (bundled by Vite) -->
+    <script type="module" src="./main.js"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
