@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // 카카오톡 채널 URL
-const KAKAO_CHANNEL_URL = 'https://pf.kakao.com/_xnxnxnx' // 실제 채널 URL로 교체 필요
+const KAKAO_CHANNEL_URL = 'http://pf.kakao.com/_kJxbQn'
 const EMAIL_ADDRESS = 'teamduzzforyou@gmail.com'
 
 export default function FloatingActionButton() {

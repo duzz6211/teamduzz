@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// 카카오톡 채널 URL을 여기에 입력하세요
-const KAKAO_CHANNEL_URL = 'https://pf.kakao.com/_xnxnxnx' // placeholder - 실제 채널 URL로 교체 필요
+// 카카오톡 채널 URL
+const KAKAO_CHANNEL_URL = 'http://pf.kakao.com/_kJxbQn'
 
 export default function KakaoFloatingButton() {
   const [isVisible, setIsVisible] = useState(false)

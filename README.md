@@ -79,11 +79,6 @@ teamduzz/
 - `/services` - 서비스 소개 (홈페이지, 랜딩페이지, 기업웹, 유지보수, 프로그램)
 - `/contact` - 문의 (이메일 폼)
 
-## 문의
-
-- 카카오톡 채널: [DUZZ 개발팀 카카오톡채널](https://pf.kakao.com/_kJxbQn)
-- 이메일: `teamduzzforyou@gmail.com`
-
 ## 배포 (GitHub Pages)
 
 ### 자동 배포 (GitHub Actions)

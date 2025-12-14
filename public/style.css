@@ -74,8 +74,6 @@ html.duzz-intro-running body {
 
 /* ========================================
    텍스트 그룹 (Team DUZZ)
-   - 초기: "T" 중심이 화면 정중앙
-   - 최종: 전체 텍스트 중앙 정렬
    ======================================== */
 
 .duzz-intro__word {
@@ -87,9 +85,8 @@ html.duzz-intro-running body {
   will-change: transform, opacity;
   white-space: nowrap;
 
-  /* 폰트 설정 */
-  font-family: Pretendard, system-ui, -apple-system, "Segoe UI", Roboto, 
-               "Helvetica Neue", Arial, "Noto Sans", 
+  font-family: Pretendard, system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans",
                "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -97,14 +94,12 @@ html.duzz-intro-running body {
   line-height: 1;
 }
 
-/* 중앙 정렬 전환 시 트랜지션 */
 .duzz-intro__word.is-centering {
   transition: transform 600ms var(--duzz-intro-ease);
 }
 
 /* ========================================
    개별 글자 (span)
-   - 부드럽게 이동하며 합쳐지는 느낌
    ======================================== */
 
 .duzz-intro__char {
@@ -114,40 +109,30 @@ html.duzz-intro-running body {
   will-change: transform, opacity;
 }
 
-/* 첫 글자 "T": 처음부터 보임 */
 .duzz-intro__char[data-i="0"] {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
-/* 나머지 글자: 초기 상태 (숨김 + 오른쪽에서 시작) */
 .duzz-intro__char:not([data-i="0"]) {
   opacity: 0;
-  /* 오른쪽에서 왼쪽으로 부드럽게 이동 (자연스럽게 이어지는 수준) */
   transform: translate3d(18px, 0, 0);
   transition:
     opacity 500ms var(--duzz-intro-ease-soft),
     transform 600ms var(--duzz-intro-ease);
 }
 
-/* 등장 시: 페이드인 + 제자리로 부드럽게 이동 */
 .duzz-intro__char.is-on {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
-/* ========================================
-   종료 애니메이션용 클래스
-   - 좌상단으로 이동하며 사라짐
-   ======================================== */
-
 .duzz-intro__word.is-exiting {
-  /* JS에서 requestAnimationFrame으로 제어 */
   pointer-events: none;
 }
 
 /* ========================================
-   페이드아웃 애니메이션 (오버레이)
+   오버레이 페이드아웃
    ======================================== */
 
 .duzz-intro__fade {
@@ -159,19 +144,9 @@ html.duzz-intro-running body {
   to { opacity: 0; }
 }
 
-/* ========================================
-   Nav 로고 페이드인 트랜지션
-   ======================================== */
-
 .duzz-logo-fadein {
   transition: opacity 800ms var(--duzz-intro-ease-soft) !important;
 }
-
-/* ========================================
-   ★ Reduced Motion 대응
-   - 브랜드 인트로 애니메이션은 예외: 반드시 실행
-   - 속도만 약간 빠르게 조정
-   ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
   html.duzz-intro-running body {
@@ -197,12 +172,9 @@ html.duzz-intro-running body {
   }
 }
 
-/* ========================================
-   반응형: 모바일에서 폰트 크기 조정
-   ======================================== */
-
 @media (max-width: 640px) {
   .duzz-intro__word {
     font-size: clamp(48px, 15vw, 72px);
   }
 }
+

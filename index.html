@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
@@ -49,13 +49,14 @@
     </script>
 
     <!-- Brand Intro (Hero only) -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="%BASE_URL%style.css" />
   </head>
   <body>
     <!-- Brand Intro (Hero-only overlay; removed after animation) -->
     <div id="duzz-intro-portal" aria-hidden="true"></div>
     <div id="root"></div>
-    <script type="module" src="/main.js"></script>
+    <!-- Public JS (do not bundle) -->
+    <script src="%BASE_URL%main.js" defer></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
