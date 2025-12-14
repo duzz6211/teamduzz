@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team DUZZ</title>
+    <script>
+      // GitHub Pages SPA fallback
+      // Redirect unknown routes to /<repo>/?p=<original_path>
+      (function () {
+        var path = window.location.pathname;
+        var parts = path.split('/').filter(Boolean);
+        var repo = parts.length ? parts[0] : '';
+        var base = repo ? '/' + repo + '/' : '/';
+
+        var original = window.location.pathname + window.location.search + window.location.hash;
+        var target = base + '?p=' + encodeURIComponent(original);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
