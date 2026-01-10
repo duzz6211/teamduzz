@@ -1,25 +1,234 @@
-.device-preview__wrapper{display:grid;grid-template-columns:1fr .6fr;gap:2em;align-items:center}
-
-/* Monitor */
-.monitor__frame{border:1px solid var(--border);border-radius:14px;background:#fff;overflow:hidden}
-.monitor__screen{aspect-ratio:16/10;background:var(--section-gray)}
-.monitor__screen img{width:100%;height:100%;object-fit:cover;display:block}
-.monitor__placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-.monitor__chin{height:1.2em;background:#fff;border-top:1px solid var(--border)}
-.monitor__stand{display:flex;flex-direction:column;align-items:center;margin-top:.75em}
-.monitor__neck{width:5em;height:.6em;background:#fff;border:1px solid var(--border);border-radius:999px}
-.monitor__base{width:10em;height:.8em;background:#fff;border:1px solid var(--border);border-radius:999px;margin-top:.5em}
-
-/* Phone */
-.phone__frame{position:relative;border:1px solid var(--border);border-radius:22px;background:#fff;overflow:hidden;max-width:18em;margin-left:auto}
-.phone__notch{position:absolute;top:.6em;left:50%;transform:translateX(-50%);width:35%;height:.35em;border-radius:999px;background:rgba(0,0,0,.08);z-index:2}
-.phone__screen{aspect-ratio:9/16;background:var(--section-gray)}
-.phone__screen img{width:100%;height:100%;object-fit:cover;display:block}
-.phone__placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-.phone__home{height:1.2em;background:#fff;border-top:1px solid var(--border)}
-
-@media (max-width:900px){
-  .device-preview__wrapper{grid-template-columns:1fr;gap:1.5em}
-  .phone__frame{margin-left:0;max-width:16em}
+.device-preview__wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 3em;
+  align-items: center;
+  padding: 2em 0;
 }
 
+/* ========================================
+   데스크탑 모니터
+======================================== */
+.monitor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monitor__body {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 0.6em;
+  box-shadow: 
+    0 0 0 2px #0a0a0a,
+    0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.monitor__screen {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.monitor__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.monitor__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background: #111;
+  font-size: 1.2em;
+}
+
+.monitor__chin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0 0.3em;
+}
+
+.monitor__logo {
+  width: 1.2em;
+  height: 1.2em;
+  background: #333;
+  border-radius: 50%;
+}
+
+/* 스탠드 */
+.monitor__stand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monitor__neck {
+  width: 3em;
+  height: 3em;
+  background: linear-gradient(to right, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.monitor__base {
+  width: 10em;
+  height: 0.8em;
+  background: linear-gradient(to bottom, #3a3a3a 0%, #222 100%);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   iPhone 스타일
+======================================== */
+.iphone {
+  position: relative;
+  max-width: 14em;
+  margin-left: auto;
+}
+
+.iphone__frame {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 2.5em;
+  padding: 0.6em;
+  box-shadow: 
+    0 0 0 2px #333,
+    0 0 0 3px #1a1a1a,
+    0 25px 50px rgba(0, 0, 0, 0.25),
+    inset 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* 측면 버튼 */
+.iphone__button {
+  position: absolute;
+  background: #2a2a2a;
+  border-radius: 2px;
+}
+
+.iphone__button--silent {
+  left: -3px;
+  top: 4.5em;
+  width: 3px;
+  height: 1.2em;
+}
+
+.iphone__button--volume-up {
+  left: -3px;
+  top: 6.5em;
+  width: 3px;
+  height: 2em;
+}
+
+.iphone__button--volume-down {
+  left: -3px;
+  top: 9em;
+  width: 3px;
+  height: 2em;
+}
+
+.iphone__button--power {
+  right: -3px;
+  top: 7em;
+  width: 3px;
+  height: 3em;
+}
+
+/* 화면 */
+.iphone__screen {
+  position: relative;
+  aspect-ratio: 9 / 19.5;
+  background: #000;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.iphone__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.iphone__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  background: #111;
+  font-size: 1em;
+}
+
+/* 다이나믹 아일랜드 */
+.iphone__dynamic-island {
+  position: absolute;
+  top: 0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5em;
+  height: 1.4em;
+  background: #000;
+  border-radius: 1em;
+  z-index: 10;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+/* ========================================
+   반응형
+======================================== */
+@media (max-width: 900px) {
+  .device-preview__wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+  }
+
+  .iphone {
+    margin: 0 auto;
+    max-width: 12em;
+  }
+}
+
+@media (max-width: 600px) {
+  .monitor__body {
+    border-radius: 6px;
+  }
+
+  .monitor__neck {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .monitor__base {
+    width: 8em;
+  }
+
+  .iphone {
+    max-width: 10em;
+  }
+
+  .iphone__frame {
+    border-radius: 2em;
+    padding: 0.5em;
+  }
+
+  .iphone__screen {
+    border-radius: 1.6em;
+  }
+
+  .iphone__dynamic-island {
+    width: 4em;
+    height: 1.1em;
+  }
+}
