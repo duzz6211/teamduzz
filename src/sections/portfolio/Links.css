@@ -1,0 +1,22 @@
+.portfolio-links__title{font-size:2em;font-weight:800;letter-spacing:-.5px;margin:0 0 1.25em}
+.portfolio-links__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25em}
+.portfolio-links__item{
+  display:block;
+  text-decoration:none;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1.25em;
+  font-weight:800;
+  letter-spacing:-.3px;
+}
+.portfolio-links__sub{
+  display:block;
+  margin-top:.6em;
+  font-size:.9em;
+  font-weight:600;
+  color:var(--muted);
+  word-break:break-all;
+}
+@media (max-width:768px){.portfolio-links__grid{grid-template-columns:1fr}}
+

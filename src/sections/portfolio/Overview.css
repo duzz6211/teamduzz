@@ -1,0 +1,8 @@
+.portfolio-overview__title{font-size:2em;font-weight:800;letter-spacing:-.5px;margin:0 0 1.25em}
+.portfolio-overview__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25em}
+.portfolio-overview__item{border:1px solid var(--border);border-radius:12px;padding:1.25em;background:var(--surface)}
+.portfolio-overview__item--full{grid-column:1 / -1}
+.portfolio-overview__label{display:block;color:var(--muted);font-weight:700;font-size:.9em;margin-bottom:.4em}
+.portfolio-overview__value{display:block;color:var(--text);line-height:1.7;font-weight:500}
+@media (max-width:768px){.portfolio-overview__grid{grid-template-columns:1fr}}
+

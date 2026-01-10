@@ -1,0 +1,19 @@
+.navbar{
+  position:fixed;top:0;left:0;right:0;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  z-index:50;
+}
+.navbar-container{display:flex;align-items:center;justify-content:space-between;height:4em}
+.navbar-logo{display:flex;align-items:center;text-decoration:none}
+.logo-image{height:1.6em;width:auto;display:block}
+.navbar-menu{list-style:none;display:flex;gap:1.25em;margin:0;padding:0}
+.nav-link{font-weight:600;text-decoration:none;color:var(--muted);position:relative;padding:0.25em 0}
+.nav-link.active{color:var(--text)}
+.nav-link::after{
+  content:"";position:absolute;left:0;right:0;bottom:-0.1em;height:2px;
+  background:var(--text);transform:scaleX(0);transform-origin:left;transition:transform .2s ease;
+}
+.nav-link.active::after{transform:scaleX(1)}
+

@@ -1,0 +1,9 @@
+.portfolio-scope__title{font-size:2em;font-weight:800;letter-spacing:-.5px;margin:0 0 1.25em}
+.portfolio-scope__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25em}
+.portfolio-scope__card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25em}
+.portfolio-scope__card--full{grid-column:1 / -1}
+.portfolio-scope__card h3{margin:0 0 .6em;font-size:1.75em;font-weight:800;letter-spacing:-.5px}
+.portfolio-scope__card p{margin:0;color:var(--muted);line-height:1.8}
+.portfolio-scope__card ul{margin:0;padding-left:1.1em;color:var(--muted);line-height:1.8}
+@media (max-width:768px){.portfolio-scope__grid{grid-template-columns:1fr}}
+

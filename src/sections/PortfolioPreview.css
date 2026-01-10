@@ -1,0 +1,48 @@
+/* Animations */
+.portfolio-preview__animate{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.portfolio-preview__animate.is-visible{opacity:1;transform:translateY(0)}
+
+.portfolio-preview__header{margin-bottom:3rem}
+.portfolio-preview__label{
+  font-size:1.25em;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;
+  color:rgba(255,255,255,.5);margin-bottom:.75em
+}
+.portfolio-preview__title{font-size:3em;font-weight:700;color:var(--text-invert);letter-spacing:-1px}
+
+.portfolio-preview__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-bottom:3rem}
+
+.preview-card{
+  display:block;text-decoration:none;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;overflow:hidden;
+  transition:transform .4s cubic-bezier(.4,0,.2,1),border-color .3s ease,box-shadow .3s ease;
+}
+.preview-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.2);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+
+.preview-card__image{width:100%;aspect-ratio:16/10;overflow:hidden;background:rgba(255,255,255,.05)}
+.preview-card__image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.preview-card:hover .preview-card__image img{transform:scale(1.05)}
+
+.preview-card__content{padding:1.5rem}
+.preview-card__category{
+  display:inline-block;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;
+  color:rgba(255,255,255,.5);margin-bottom:.75rem
+}
+.preview-card__title{font-size:1.25rem;font-weight:700;color:var(--text-invert);margin:0 0 .5rem;line-height:1.3}
+.preview-card__summary{
+  font-size:.9375rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0 0 1rem;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden
+}
+.preview-card__meta{display:flex;align-items:center;gap:.5rem;font-size:.8125rem;color:rgba(255,255,255,.4)}
+
+.portfolio-preview__action{display:flex;justify-content:center}
+.btn--outline-light{border-color:rgba(255,255,255,.4)!important;color:var(--text-invert)!important}
+.btn--outline-light:hover{border-color:var(--text-invert)!important;background:rgba(255,255,255,.05)!important}
+
+@media (max-width:768px){
+  .portfolio-preview__grid{grid-template-columns:1fr;gap:1.5rem}
+  .preview-card__content{padding:1.25rem}
+  .preview-card__title{font-size:1.125rem}
+}
+

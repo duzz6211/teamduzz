@@ -1,0 +1,40 @@
+.portfolio-page{
+  padding-top:6em;
+  padding-bottom:8em;
+}
+
+.portfolio-list__header{
+  margin-bottom:3em;
+}
+.portfolio-list__title{
+  font-size:3em;
+  font-weight:700;
+  letter-spacing:-1px;
+  margin:0 0 .4em;
+}
+.portfolio-list__desc{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.portfolio-list__grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.25em;
+}
+
+.portfolio-list__sentinel{height:1px}
+.portfolio-list__status{
+  text-align:center;
+  color:var(--muted);
+  padding:2em 0 0;
+}
+
+@media (max-width: 1024px){
+  .portfolio-list__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 640px){
+  .portfolio-list__grid{grid-template-columns:1fr}
+}
+

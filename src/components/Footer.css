@@ -1,0 +1,174 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 4em 0 2em;
+  margin-top: 0;
+}
+
+/* 상단 영역 */
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 4em;
+  margin-bottom: 3em;
+}
+
+/* 브랜드 섹션 */
+.footer__brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__logo-img {
+  width: 2em;
+  height: 2em;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer__logo-text {
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.footer__description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 링크 그룹 */
+.footer__links-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.footer__links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer__links-title {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 0.5em;
+}
+
+.footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.footer__links li {
+  font-size: 0.9em;
+}
+
+.footer__links span,
+.footer__links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #fff;
+}
+
+/* 연락처 리스트 */
+.footer__contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+}
+
+.footer__contact-label {
+  font-size: 0.75em;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+}
+
+.footer__contact-list a {
+  font-size: 0.9em;
+}
+
+/* 구분선 */
+.footer__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 2em;
+}
+
+/* 하단 영역 */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.footer__copyright {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.footer__legal {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+
+/* 반응형: 태블릿 */
+@media (max-width: 900px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .footer__links-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 반응형: 모바일 */
+@media (max-width: 600px) {
+  .footer {
+    padding: 3em 0 1.5em;
+  }
+
+  .footer__links-group {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+
+  .footer__links-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+  }
+}

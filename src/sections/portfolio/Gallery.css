@@ -1,0 +1,6 @@
+.portfolio-gallery__title{font-size:2em;font-weight:800;letter-spacing:-.5px;margin:0 0 1.25em}
+.portfolio-gallery__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25em}
+.portfolio-gallery__item{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--section-gray);aspect-ratio:4/3}
+.portfolio-gallery__item img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:900px){.portfolio-gallery__grid{grid-template-columns:1fr}}
+

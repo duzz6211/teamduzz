@@ -1,0 +1,125 @@
+[
+  {
+    "id": "25-0022",
+    "title": "한음더힐 랜딩페이지",
+    "category": "홈페이지 제작",
+    "year": "2025",
+    "thumbnail": "images/portfolio/25-0022_pc.png",
+    "summary": "프리미엄 주거 단지의 가치를 담은 아파트 분양 및 소개 홈페이지",
+    "images": {
+      "pc": "images/portfolio/25-0022_pc.png",
+      "mobile": "images/portfolio/25-0022_mobile.png"
+    },
+    "overview": {
+      "client": "(주)이첸이엔씨",
+      "duration": "4주",
+      "description": "한음더힐 아파트의 브랜드 가치와 단지 정보를 효과적으로 전달하는 소개 홈페이지입니다."
+    },
+    "scope": {
+      "problem": "기존에는 오프라인 브로셔와 전화 상담에 의존하여 정보 전달이 제한적이었고, 잠재 고객 유입이 어려웠습니다.",
+      "solution": "온라인에서 단지 정보, 입지 환경, 커뮤니티 시설 등을 한눈에 확인할 수 있는 반응형 랜딩을 구축했습니다.",
+      "role": ["웹 디자인", "퍼블리싱", "반응형 개발"]
+    },
+    "features": [
+      "브랜드/단지 소개 섹션 구성",
+      "핵심 정보 빠른 탐색 UI",
+      "갤러리/비주얼 중심 구성",
+      "문의 폼 유입 설계",
+      "PC / 모바일 반응형 지원"
+    ],
+    "results": [
+      { "label": "온라인 문의", "value": "+120%" },
+      { "label": "체류 시간", "value": "3분 40초" },
+      { "label": "모바일 비율", "value": "68%" }
+    ],
+    "gallery": [],
+    "links": { "live": "https://한음더힐.com", "github": null }
+  },
+  {
+    "id": "25-0023",
+    "title": "블루모션 공식 홈페이지",
+    "category": "홈페이지 제작",
+    "year": "2025",
+    "thumbnail": "images/portfolio/25-0023_pc.png",
+    "summary": "블루모션의 브랜드 신뢰도와 정보를 전달하는 공식 홈페이지",
+    "images": {
+      "pc": "images/portfolio/25-0023_pc.png",
+      "mobile": "images/portfolio/25-0023_mobile.png"
+    },
+    "overview": {
+      "client": "블루모션",
+      "duration": "약 2주 (초기 구축) + 유지보수 진행 중",
+      "description": "블루모션의 공식 웹사이트로, 주요 정보를 안정적으로 전달하기 위해 제작되었습니다."
+    },
+    "scope": {
+      "problem": "공식적으로 운영되는 웹사이트가 없어 정보 전달과 대외 신뢰도 확보에 한계가 있었습니다.",
+      "solution": "공식 도메인 기반 홈페이지를 구축해 정보를 일관되게 전달하고, 운영/개선이 가능한 구조로 설계했습니다.",
+      "role": ["기획", "웹 디자인", "퍼블리싱", "반응형 개발", "SEO 기본 세팅", "유지보수"]
+    },
+    "features": [
+      "단체/브랜드 소개 및 핵심 정보 구성",
+      "검색 노출 고려한 기본 SEO 구조",
+      "콘텐츠 업데이트를 고려한 구조",
+      "PC / 모바일 반응형 지원"
+    ],
+    "results": [
+      { "label": "프로젝트 상태", "value": "실서비스 운영" },
+      { "label": "유지보수", "value": "진행 중" }
+    ],
+    "gallery": [],
+    "links": { "live": "https://www.fmta.kr", "github": null }
+  },
+  {
+    "id": "25-0002",
+    "title": "기업 홈페이지 리뉴얼",
+    "category": "홈페이지 제작",
+    "year": "2024",
+    "thumbnail": null,
+    "summary": "노후화된 기업 홈페이지를 모던한 디자인과 반응형 레이아웃으로 전면 리뉴얼",
+    "images": { "pc": null, "mobile": null },
+    "overview": {
+      "client": "제조업 중견기업",
+      "duration": "6주",
+      "description": "노후화된 기업 홈페이지를 현대적인 디자인으로 리뉴얼하고 모바일 환경에 최적화된 반응형 웹사이트로 재구축했습니다."
+    },
+    "scope": {
+      "problem": "모바일 미지원, 느린 로딩 속도, 콘텐츠 업데이트의 어려움이 있었습니다.",
+      "solution": "반응형 웹 구축, 성능 최적화, 운영 편의를 위한 구조 개선을 진행했습니다.",
+      "role": ["퍼블리싱", "성능 최적화"]
+    },
+    "features": ["반응형 웹 디자인", "SEO 기본 최적화", "문의 폼 연동"],
+    "results": [
+      { "label": "페이지 로딩 속도", "value": "-60%" },
+      { "label": "모바일 트래픽", "value": "+85%" }
+    ],
+    "gallery": [],
+    "links": { "live": null, "github": null }
+  },
+  {
+    "id": "25-0003",
+    "title": "관리자 대시보드",
+    "category": "관리자 페이지",
+    "year": "2023",
+    "thumbnail": null,
+    "summary": "복잡한 데이터를 한눈에 파악할 수 있는 관리자 대시보드 시스템",
+    "images": { "pc": null, "mobile": null },
+    "overview": {
+      "client": "이커머스 플랫폼",
+      "duration": "10주",
+      "description": "주문/재고/고객/매출 데이터를 통합 관리할 수 있는 관리자 대시보드를 구축했습니다."
+    },
+    "scope": {
+      "problem": "분산된 데이터를 수작업으로 취합해야 했고, 실시간 현황 파악이 어려웠습니다.",
+      "solution": "데이터 통합 대시보드와 자동화된 리포트 기반 구조로 의사결정 속도를 개선했습니다.",
+      "role": ["프론트엔드 개발", "데이터 시각화", "API 연동"]
+    },
+    "features": ["실시간 현황", "권한별 접근 제어", "리포트 다운로드"],
+    "results": [
+      { "label": "리포트 작성 시간", "value": "-80%" },
+      { "label": "의사결정 속도", "value": "+50%" }
+    ],
+    "gallery": [],
+    "links": { "live": null, "github": null }
+  }
+]
+

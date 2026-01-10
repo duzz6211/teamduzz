@@ -1,0 +1,28 @@
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  padding:.9em 1.2em;
+  border-radius:.6em;
+  font-weight:600;
+  font-family:inherit;
+  cursor:pointer;
+  border:1px solid transparent;
+  text-decoration:none;
+  transition:filter .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+
+.btn--primary{background:#111;color:#fff}
+.btn--outline{background:transparent;border-color:#111;color:#111}
+.btn--ghost{background:transparent;border-color:transparent;color:#111}
+
+.btn:hover{filter:brightness(.95);box-shadow:0 10px 20px rgba(0,0,0,.06)}
+.btn--ghost:hover{box-shadow:none;filter:brightness(.9)}
+
+.btn--sm{font-size:.9em;padding:.7em 1em}
+.btn--md{font-size:1em}
+.btn--lg{font-size:1.05em;padding:1em 1.35em}
+

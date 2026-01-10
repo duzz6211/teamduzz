@@ -1,0 +1,7 @@
+.portfolio-results__title{font-size:2em;font-weight:800;letter-spacing:-.5px;margin:0 0 1.25em}
+.portfolio-results__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25em}
+.portfolio-results__card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25em}
+.portfolio-results__label{color:var(--muted);font-weight:700;margin-bottom:.5em}
+.portfolio-results__value{font-size:1.4em;font-weight:800;letter-spacing:-.5px}
+@media (max-width:900px){.portfolio-results__grid{grid-template-columns:1fr}}
+
