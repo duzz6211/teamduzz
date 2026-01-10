@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team DUZZ</title>
+    <title>TeamDuzz</title>
+    <!--
+      GitHub Pages에서 /portfolio 같은 경로로 직접 접근하면 404.html이 뜹니다.
+      여기서 원래 경로를 ?p=... 로 넘겨 index.html이 복원하도록 합니다.
+      참고: https://github.com/rafgraph/spa-github-pages
+    -->
     <script>
-      // GitHub Pages SPA fallback
-      // Redirect unknown routes to /<repo>/?p=<original_path>
-      (function () {
-        var path = window.location.pathname;
-        var parts = path.split('/').filter(Boolean);
-        var repo = parts.length ? parts[0] : '';
-        var base = repo ? '/' + repo + '/' : '/';
-
-        var original = window.location.pathname + window.location.search + window.location.hash;
-        var target = base + '?p=' + encodeURIComponent(original);
-        window.location.replace(target);
-      })();
+      ;(function () {
+        var l = window.location
+        var target = l.pathname + l.search + l.hash
+        var redirect = '/?p=' + encodeURIComponent(target)
+        l.replace(redirect)
+      })()
     </script>
   </head>
   <body></body>
 </html>
+

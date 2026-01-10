@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://teamduzz.github.io/sitemap.xml
-
-
-

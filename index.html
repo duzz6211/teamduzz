@@ -2,62 +2,33 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/DUZZ_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Team Duzz | 신뢰로 완성되는 웹 - 기획부터 유지보수까지</title>
-    <meta name="title" content="Team Duzz | 신뢰로 완성되는 웹 - 기획부터 유지보수까지" />
-    <meta name="description" content="Team Duzz는 역할 기반 전문 개발팀입니다. 웹 개발 외주, 홈페이지 제작, 랜딩페이지 제작, 기업 소개 웹사이트, 웹 유지보수, 프로그램 개발까지 책임집니다." />
-    <meta name="keywords" content="웹 개발 외주, 홈페이지 제작, 랜딩페이지 제작, 기업 소개 웹사이트, 웹 유지보수, 프로그램 개발, 웹 에이전시" />
-    <meta name="author" content="Team Duzz" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://teamduzz.github.io/" />
-    <meta property="og:title" content="Team Duzz | 신뢰로 완성되는 웹" />
-    <meta property="og:description" content="기획부터 유지보수까지 책임지는 역할 기반 전문 개발팀. 웹 개발 외주, 홈페이지 제작, 랜딩페이지, 기업 웹사이트 전문." />
-    <meta property="og:image" content="https://teamduzz.github.io/assets/og.png" />
-    <meta property="og:locale" content="ko_KR" />
-    <meta property="og:site_name" content="Team Duzz" />
+    <title>TeamDuzz</title>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://teamduzz.github.io/" />
-    <meta property="twitter:title" content="Team Duzz | 신뢰로 완성되는 웹" />
-    <meta property="twitter:description" content="기획부터 유지보수까지 책임지는 역할 기반 전문 개발팀. 웹 개발 외주, 홈페이지 제작, 랜딩페이지, 기업 웹사이트 전문." />
-    <meta property="twitter:image" content="https://teamduzz.github.io/assets/og.png" />
-
-    <!-- Fonts - Preconnect for faster loading -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#6d28d9" />
-
-    <!-- SPA routing on GitHub Pages (handle 404.html redirect) -->
+    <!--
+      GitHub Pages + BrowserRouter(해시 없는 URL) 새로고침/직접접근 대응
+      public/404.html 에서 ?p=... 로 넘긴 값을 여기서 복원합니다.
+      참고: https://github.com/rafgraph/spa-github-pages
+    -->
     <script>
-      (function () {
-        var params = new URLSearchParams(window.location.search);
-        var p = params.get('p');
-        if (p) {
-          try {
-            window.history.replaceState(null, '', p);
-          } catch (e) {}
+      ;(function () {
+        var params = new URLSearchParams(window.location.search)
+        var p = params.get('p')
+        if (!p) return
+        try {
+          var decoded = decodeURIComponent(p)
+          window.history.replaceState(null, '', decoded)
+        } catch (e) {
+          // ignore
         }
-      })();
+      })()
     </script>
-
-    <!-- Brand Intro removed: render main content immediately -->
-    <script type="module" crossorigin src="/assets/index-B3DvPu78.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-P6eNtvl9.js">
-    <link rel="modulepreload" crossorigin href="/assets/motion-CF4o1xqv.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-oe8_0Vgd.css">
+    <script type="module" crossorigin src="/assets/index-Jv2RXPwG.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-HZp2hxN4.css">
   </head>
   <body>
     <div id="root"></div>
   </body>
 </html>
-
-
 
