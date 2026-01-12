@@ -1,0 +1,60 @@
+/* Main Page - Full Page Scroll */
+
+.fullpage-container {
+  /* 풀페이지 컨테이너 */
+}
+
+/* 각 풀페이지 섹션 - 100vh 풀스크린 */
+.fullpage-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* 내부 섹션 요소들의 padding 조정 (fullpage 내에서는 더 작게) */
+.fullpage-section > .section {
+  padding-top: calc(var(--nav-height) + 2rem);
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hero는 이미 100vh이므로 중복 조정 */
+.fullpage-section#hero > .hero {
+  padding-top: var(--nav-height);
+}
+
+/* 모바일에서 스냅 비활성화, 기본 스크롤로 */
+@media (max-width: 768px) {
+  .fullpage-section {
+    min-height: auto;
+    scroll-snap-align: none;
+  }
+  
+  .fullpage-section > .section {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + 1rem);
+    padding-bottom: 3rem;
+  }
+}
+
+/* 섹션 진입 애니메이션 */
+.fullpage-section .container {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .fullpage-section .container {
+    transition: none;
+  }
+}
+

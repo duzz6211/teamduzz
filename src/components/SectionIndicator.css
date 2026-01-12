@@ -1,0 +1,112 @@
+/* Section Indicator - 우측 도트 네비게이션 */
+.section-indicator {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.section-indicator__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-indicator__dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-indicator__dot:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: scale(1.2);
+}
+
+.section-indicator__dot.active {
+  background: var(--text, #111);
+  border-color: var(--text, #111);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip */
+.section-indicator__tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.4rem 0.75rem;
+  background: var(--text, #111);
+  color: var(--bg, #fff);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.section-indicator__tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: var(--text, #111);
+}
+
+.section-indicator__dot:hover .section-indicator__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 다크 섹션에서 반전 */
+.section--dark ~ .section-indicator .section-indicator__dot,
+.section-indicator--light .section-indicator__dot {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.section--dark ~ .section-indicator .section-indicator__dot:hover,
+.section-indicator--light .section-indicator__dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.section--dark ~ .section-indicator .section-indicator__dot.active,
+.section-indicator--light .section-indicator__dot.active {
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* 모바일에서 숨김 */
+@media (max-width: 768px) {
+  .section-indicator {
+    display: none;
+  }
+}
+
+/* reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .section-indicator__dot {
+    transition: none;
+  }
+  .section-indicator__tooltip {
+    transition: none;
+  }
+}
+
