@@ -4,9 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { Button } from '../components/ui'
 import './Contact.css'
 
-const GOOGLE_SCRIPT_URL =
-  import.meta.env.VITE_CONTACT_API_URL ||
-  'https://script.google.com/macros/s/AKfycbxMzGwYLkRdL_Zyj2rdkKIryLSUZM1GyMl-cWps1DjPSSdJ5QmOxjk3F_PASEa_enSL/exec'
+const GOOGLE_SCRIPT_URL = import.meta.env.VITE_CONTACT_API_URL
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,6 +24,15 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (!GOOGLE_SCRIPT_URL) {
+      setStatus({
+        loading: false,
+        success: false,
+        error: '문의 전송 설정이 누락되었습니다. (VITE_CONTACT_API_URL 환경변수를 설정해주세요)',
+      })
+      return
+    }
 
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus({ loading: false, success: false, error: '필수 항목을 모두 입력해주세요.' })
